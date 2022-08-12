@@ -1,0 +1,88 @@
+.timecard {
+  width: $card-width;
+  height: $card-height;
+  position: relative;
+
+  @include phone {
+    width: 100%;
+    margin-bottom: 64px;
+    height: $card-height-sm;
+  }
+
+  &--exercise &__bg {
+    background-color: $limegreen;
+    background-image: url('../../assets/icon-exercise.svg');
+  }
+  &--play &__bg {
+    background-color: $softblue;
+    background-image: url('../../assets/icon-play.svg');
+  }
+  &--selfcare &__bg {
+    background-color: $softorange;
+    background-image: url('../../assets/icon-self-care.svg');
+  }
+  &--social &__bg {
+    background-color: $violet;
+    background-image: url('../../assets/icon-social.svg');
+  }
+  &--study &__bg {
+    background-color: $lightred;
+    background-image: url('../../assets/icon-study.svg');
+  }
+  &--work &__bg {
+    background-color: $red;
+    background-image: url('../../assets/icon-work.svg');
+  }
+
+  &__bg {
+    border-radius: $radius-md;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-position: calc(100% - 16px) -8px;
+    background-repeat: no-repeat;
+  }
+  &__body {
+    border-radius: $radius-md;
+    position: relative;
+    height: 100%;
+    top: 45px;
+    padding: $padding-md;
+    background-color: $darkblue;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(52, 57, 123);
+    }
+    @include phone {
+      top: 40px;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__values {
+    @include phone {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__hours {
+    font-size: $fontsize-xxl;
+    font-weight: $light;
+    margin: 24px 0 12px 0;
+    @include phone {
+      font-size: $fontsize-lg;
+      margin: 8px 0;
+    }
+  }
+  &__totalhours {
+    font-size: $fontsize-sm;
+    font-weight: $light;
+    color: $semiwhite;
+  }
+}

@@ -1,0 +1,77 @@
+.profile {
+  border-radius: $radius-md;
+  overflow: hidden;
+  width: $card-width;
+  background-color: $darkblue;
+  display: flex;
+  flex-direction: column;
+  grid-area: profile;
+
+  @include phone {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    height: 352px;
+    padding: $padding-md;
+    background-color: $blue;
+    border-bottom-left-radius: $radius-md;
+    border-bottom-right-radius: $radius-md;
+    @include phone {
+      height: auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__avatar {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    @include phone {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__name {
+    flex: 1;
+    font-size: $fontsize-xl;
+    font-weight: $light;
+    margin-top: 32px;
+    @include phone {
+      font-size: $fontsize-md;
+      margin-top: 0;
+      margin-left: 20px;
+    }
+  }
+  &__report {
+    display: block;
+    font-size: $fontsize-sm;
+    font-weight: $light;
+    color: $semiwhite;
+    margin-bottom: 4px;
+    @include phone {
+      margin-top: 0;
+    }
+  }
+  &__menu {
+    padding: $padding-md;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include phone {
+      flex-direction: row;
+    }
+  }
+  &__menuitem {
+    font-weight: $light;
+    color: rgb(115, 118, 185);
+    text-transform: capitalize;
+    cursor: pointer;
+    &.active {
+      color: $white;
+    }
+  }
+}
